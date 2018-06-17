@@ -52,9 +52,9 @@ class Key extends Component{
 
     render(){
         return(
-            <div class="container p-3 mb-2 bg-white text-dark rounded">
+            <div class="container p-3 bg-white text-dark rounded">
                 <div class="form-group">
-                    <select class="selectpicker mx-2" ref = {e => this.list = e}  >
+                    <select class="selectpicker mx-2 my-3" ref = {e => this.list = e}  >
                         <option value='A'>A</option>
                         <option value='B'>B</option>
                         <option value='C'>C</option>

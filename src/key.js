@@ -70,7 +70,7 @@ class Key extends Component{
                     </select>
                 </div>
             
-                <button class="btn btn-primary mb-3" onClick={() => this.show(this.list.value, this.key.value)}>show!!</button>
+                
                 <p class="alert alert-primary" role="alert">{this.state.show.join(' -> ')}</p>
             </div>
             

@@ -54,7 +54,7 @@ class Key extends Component{
         return(
             <div class="container p-3 bg-white text-dark rounded">
                 <div class="form-group">
-                    <select class="selectpicker mx-2 my-3" ref = {e => this.list = e}  >
+                    <select class="selectpicker mx-2 my-2" ref = {e => this.list = e}  >
                         <option value='A'>A</option>
                         <option value='B'>B</option>
                         <option value='C'>C</option>
@@ -70,7 +70,7 @@ class Key extends Component{
                     </select>
                 </div>
             
-                <button class="btn btn-primary my-3" onClick={() => this.show(this.list.value, this.key.value)}>show!!</button>
+                <button class="btn btn-primary mb-3" onClick={() => this.show(this.list.value, this.key.value)}>show!!</button>
                 <p class="alert alert-primary" role="alert">{this.state.show.join(' -> ')}</p>
             </div>
             

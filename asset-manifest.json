@@ -1,6 +1,20 @@
 {
   "main.css": "static/css/main.30737fb4.css",
   "main.css.map": "static/css/main.30737fb4.css.map",
-  "main.js": "static/js/main.a502d5c5.js",
-  "main.js.map": "static/js/main.a502d5c5.js.map"
+  "main.js": "static/js/main.dc8f2bd9.js",
+  "main.js.map": "static/js/main.dc8f2bd9.js.map",
+  "static\\media\\A_major.gif": "static/media/A_major.8bd9e033.gif",
+  "static\\media\\A_minor.gif": "static/media/A_minor.bc33b05d.gif",
+  "static\\media\\B_major.gif": "static/media/B_major.b6084520.gif",
+  "static\\media\\B_minor.gif": "static/media/B_minor.e2c35abf.gif",
+  "static\\media\\C_major.gif": "static/media/C_major.2186bc31.gif",
+  "static\\media\\C_minor.gif": "static/media/C_minor.908172be.gif",
+  "static\\media\\D_major.gif": "static/media/D_major.d06d0ead.gif",
+  "static\\media\\D_minor.gif": "static/media/D_minor.d3d63cb6.gif",
+  "static\\media\\E_major.gif": "static/media/E_major.ec89aedc.gif",
+  "static\\media\\E_minor.gif": "static/media/E_minor.d0a46d00.gif",
+  "static\\media\\F_major.gif": "static/media/F_major.4f99cc09.gif",
+  "static\\media\\F_minor.gif": "static/media/F_minor.a5861d0c.gif",
+  "static\\media\\G_major.gif": "static/media/G_major.f4e74aba.gif",
+  "static\\media\\G_minor.gif": "static/media/G_minor.ebc063fd.gif"
 }

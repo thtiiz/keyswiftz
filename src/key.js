@@ -25,7 +25,7 @@ class Key extends Component{
             keyProgress: ["A", "Bm", "C#m", "D", "E", "F#m", "G#dim"],
             keyThis: ["A","major"],
             infoVisible: <p class="alert alert-info visible">Select your Key!!</p>,
-            collapseShow:"collapse"
+            infoOpen:"False"
             //min_on_maj: [1, 2, 5],
         }
         this.keyProgress = this.keyProgress.bind(this)
@@ -52,14 +52,25 @@ class Key extends Component{
         this.setState({
             keyProgress: change,
             keyThis: [val, maj_min],
-            infoVisible: '',
-            collapseShow:"collapse show"
-        })    
+            infoVisible: <p class="alert alert-success visible">Key changed!!</p>,
+        })
     }
     
-    scaleCh(valKey){
-        alert(valKey)   
+    changeInfo(){
+        if(this.state.infoOpen==="True"){
+            this.setState({
+                infoVisible: <p class="alert alert-success visible">Click Scale to open!!</p>,
+                infoOpen:"False"
+            })
+        }
+        else{
+            this.setState({
+                infoVisible: <p class="alert alert-success visible">Click Scale to close!!</p>,
+                infoOpen:"True"
+            })
+        }
     }
+
     render(){
         return(
             <div class="container p-3 bg-white rounded">
@@ -84,8 +95,8 @@ class Key extends Component{
                 
                 <p class="alert alert-primary" role="alert">{this.state.keyProgress.join(' -> ')}</p>
 
-                <button class="btn btn-info my-3" data-toggle="collapse" data-target="#scale">Scale</button>
-                <div id="scale" class={this.state.collapseShow}>
+                <button class="btn btn-info my-3" data-toggle="collapse" data-target="#scale" onClick={() => this.changeInfo()}>Scale</button>
+                <div id="scale" class="collapse">
                     <Scale keyCh={this.state.keyThis}/>
                 </div>    
                 {this.state.infoVisible}

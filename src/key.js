@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Scale from './Scale'
+import $ from "jquery";
 
 class Key extends Component{
     constructor(props){
@@ -56,12 +57,18 @@ class Key extends Component{
         })
     }
     
+    moveDown(){
+        $('html, body').animate({scrollTop:
+        $('#scale').offset().top}, 'slow')
+    }
+
     changeInfo(){
         if(this.state.infoOpen==="True"){
             this.setState({
                 infoVisible: <p class="alert alert-success visible">Click Scale to open!!</p>,
                 infoOpen:"False"
             })
+            
         }
         else{
             this.setState({
@@ -69,6 +76,7 @@ class Key extends Component{
                 infoOpen:"True"
             })
         }
+        this.moveDown()
     }
 
     render(){

@@ -22,8 +22,10 @@ class Key extends Component{
                 F: ["Fm", "Gdim", "Ab", "Bbm", "Cm", "Db", "Eb"],
                 G: ["Gm", "Adim", "Bb", "Cm", "Dm", "Eb", "F"],},
                 
-            keyProgress: ["Please", "Select"],
+            keyProgress: ["A", "Bm", "C#m", "D", "E", "F#m", "G#dim"],
             keyThis: ["A","major"],
+            infoVisible: <p class="alert alert-info visible">Select your Key!!</p>,
+            collapseShow:"collapse"
             //min_on_maj: [1, 2, 5],
         }
         this.keyProgress = this.keyProgress.bind(this)
@@ -49,7 +51,9 @@ class Key extends Component{
         }
         this.setState({
             keyProgress: change,
-            keyThis: [val, maj_min]
+            keyThis: [val, maj_min],
+            infoVisible: '',
+            collapseShow:"collapse show"
         })    
     }
     
@@ -60,7 +64,7 @@ class Key extends Component{
         return(
             <div class="container p-3 bg-white rounded">
                 <div class="form-group">
-                    <select class="selectpicker mx-2 my-2" ref = {e => this.list = e}>
+                    <select class="selectpicker mx-2 my-2" ref = {e => this.list = e} onChange={() => this.keyProgress(this.list.value, this.key.value)}>
                         <option value='A'>A</option>
                         <option value='B'>B</option>
                         <option value='C'>C</option>
@@ -70,22 +74,21 @@ class Key extends Component{
                         <option value='G'>G</option>
                     </select>
 
-                    <select class="selectpicker" ref = {f => this.key = f}>
+                    <select class="selectpicker" ref = {f => this.key = f} onChange={() => this.keyProgress(this.list.value, this.key.value)}>
                         <option value="major">Major</option>
                         <option value="minor">Minor</option>
                     </select>
                 </div>
 
-                <button class="btn btn-primary mb-3" onClick={() => this.keyProgress(this.list.value, this.key.value)}>Chord progression!!</button>
+                {/*<button class="btn btn-primary mb-3" onClick={() => this.keyProgress(this.list.value, this.key.value)}>Chord progression!!</button>*/}
+                
                 <p class="alert alert-primary" role="alert">{this.state.keyProgress.join(' -> ')}</p>
-                
-                
+
                 <button class="btn btn-info my-3" data-toggle="collapse" data-target="#scale">Scale</button>
-                
-                <div id="scale" class="collapse">
-            
+                <div id="scale" class={this.state.collapseShow}>
                     <Scale keyCh={this.state.keyThis}/>
                 </div>    
+                {this.state.infoVisible}
             </div>
         )
     }

@@ -25,7 +25,7 @@ class Key extends Component{
                 
             keyProgress: ["A", "Bm", "C#m", "D", "E", "F#m", "G#dim"],
             keyThis: ["A","major"],
-            infoVisible: <p class="alert alert-info visible">Select your Key!!</p>,
+            infoVisible: <p class="alert alert-info visible mt-3">Select your Key!!</p>,
             infoOpen:"False"
             //min_on_maj: [1, 2, 5],
         }
@@ -53,7 +53,7 @@ class Key extends Component{
         this.setState({
             keyProgress: change,
             keyThis: [val, maj_min],
-            infoVisible: <p class="alert alert-success visible">Key changed!!</p>,
+            infoVisible: <p class="alert alert-success visible mt-3">Key changed!!</p>,
         })
     }
     
@@ -65,14 +65,14 @@ class Key extends Component{
     changeInfo(){
         if(this.state.infoOpen==="True"){
             this.setState({
-                infoVisible: <p class="alert alert-success visible">Click Scale to open!!</p>,
+                infoVisible: <p class="alert alert-success visible mt-3">Click Scale to open!!</p>,
                 infoOpen:"False"
             })
             
         }
         else{
             this.setState({
-                infoVisible: <p class="alert alert-success visible">Click Scale to close!!</p>,
+                infoVisible: <p class="alert alert-success visible mt-3">Click Scale to close!!</p>,
                 infoOpen:"True"
             })
         }

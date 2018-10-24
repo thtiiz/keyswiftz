@@ -1,6 +1,7 @@
 ## Keyswiftz
 
-keyswiftz เว็บไซต์ที่ช่วยให้มือใหม่ที่ต้องการฝึกเล่น guitar และอยากจะเข้าใจ คอร์ด (Chord) ทางคอร์ด (Chord progression) และอื่นๆ
+keyswiftz เว็บไซต์ที่ช่วยให้มือใหม่ที่ต้องการฝึกเล่น guitar และอยากจะเข้าใจ คอร์ด (Chord) ทางคอร์ด (Chord progression) เพื่อพัฒนาฝึมือในการเล่น
+ให้ดีขึ้น เว็บไซต์นี้จึงเหมาะมากสำหรับมือใหม่
 
 # features
 - [x] Chord progression in Major and Minor

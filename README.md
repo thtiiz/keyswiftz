@@ -1,5 +1,5 @@
 ## Keyswiftz
-> My first website with react
+
 keyswiftz เว็บไซต์ที่ช่วยให้มือใหม่ที่ต้องการฝึกเล่น guitar และอยากจะเข้าใจ คอร์ด (Chord) ทางคอร์ด (Chord progression) และอื่นๆ
 
 # features
